@@ -31,7 +31,7 @@ impl Solution {
         String::new()
     }
 
-    fn is_palindrome(vec: &Vec<char>, start: usize, length: usize) -> bool {
+    fn is_palindrome(vec: &[char], start: usize, length: usize) -> bool {
         let end = start + length - 1;
         for i in 0..(length / 2) {
             if vec[start + i] != vec[end - i] {
