@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 #[test]
 fn case_1() {
     assert_eq!(
@@ -25,6 +23,8 @@ fn case_3() {
 }
 
 pub struct Solution;
+
+use std::collections::HashSet;
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
