@@ -51,13 +51,13 @@ impl Solution {
         let mut left = 0;
         let mut longest = 0;
 
-        for right in 0..s.len() {
-            while hashset.contains(&slice[right]) {
+        for (right, char) in slice.iter().enumerate() {
+            while hashset.contains(&char) {
                 hashset.remove(&slice[left]);
                 left += 1;
             }
-        
-            hashset.insert(slice[right]);
+
+            hashset.insert(char);
             longest = longest.max(right - left + 1);
         }
 
